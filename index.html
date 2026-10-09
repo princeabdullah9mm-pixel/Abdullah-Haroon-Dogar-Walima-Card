@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#07111f">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+<title>Walima Reception | Abdullah Dogar</title>
+<style>
+:root{--gold:#d9aa51;--gold2:#f5d98a;--navy:#050b16;--cream:#fff3d7;--green:#123b2c}
+*{box-sizing:border-box}
+body{margin:0;min-height:100svh;background:radial-gradient(ellipse at 50% 18%,#49301b 0,#11101a 42%,#02040a 100%);color:var(--cream);font-family:'Palatino Linotype','Book Antiqua',Georgia,serif;display:grid;place-items:center;padding:16px;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background-image:radial-gradient(#f5d58b 1px,transparent 1px),radial-gradient(#fff 1px,transparent 1px);background-size:53px 53px,89px 89px;background-position:0 0,22px 35px;opacity:.18}
+.app{width:min(100%,440px);position:relative;z-index:1}.brand{text-align:center;color:var(--gold2);font:10px Arial,sans-serif;letter-spacing:.28em;text-transform:uppercase;margin:0 0 14px}
+.scene{perspective:1400px;position:relative;min-height:650px}.book{width:100%;height:630px;position:relative;transform-style:preserve-3d}
+.backdrop{position:absolute;inset:0;border:2px solid var(--gold);border-radius:12px;background:linear-gradient(135deg,#0b1a2a,#020710 78%);box-shadow:0 24px 75px #000d,inset 0 0 0 7px #e5bd5d12;overflow:hidden}
+.backdrop:before{content:"";position:absolute;inset:11px;border:1px solid #d6ad5780;border-radius:7px}.arch{position:absolute;inset:24px 18px 22px;border:1px solid #c89b46;border-radius:170px 170px 8px 8px;opacity:.65}
+.back-copy{position:absolute;inset:44px 24px;text-align:center;display:flex;flex-direction:column;align-items:center}.orn{font-size:28px;color:var(--gold);letter-spacing:.25em;margin:0 0 20px}.back-copy h1{font-family:'Avenir Next','Segoe UI',Arial,sans-serif;font-weight:500;text-transform:uppercase;letter-spacing:.14em;line-height:1.3;font-size:27px;color:var(--gold2);margin:0}.kicker{font:10px Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;margin-top:14px;color:#f0dfb5}
+.doors{position:absolute;inset:0;display:flex;transform-style:preserve-3d;z-index:4;pointer-events:none}.door{width:50%;height:100%;position:relative;transform-style:preserve-3d;transition:transform 1.65s cubic-bezier(.2,.75,.15,1);background:repeating-linear-gradient(135deg,#0a1928 0,#0a1928 12px,#07101c 13px,#07101c 25px);border:2px solid var(--gold);box-shadow:inset 0 0 0 7px #d5ad5010,inset 0 0 0 9px #c69b4450;backface-visibility:hidden}.door:before{content:"✦ ❧ ✦ ❧ ✦";position:absolute;inset:12px;border:1px solid #d8b35b99;color:#d8b35b;font-size:18px;letter-spacing:.12em;text-align:center;padding-top:18px;text-shadow:0 0 10px #c99134}.door.left{transform-origin:left center;border-radius:12px 0 0 12px}.door.right{transform-origin:right center;border-radius:0 12px 12px 0}.door.left:after{content:"WALIMA\A RECEPTION";white-space:pre;position:absolute;left:8px;right:8px;top:34%;text-align:center;color:var(--gold2);font-family:'Avenir Next','Segoe UI',Arial,sans-serif;font-size:14px;letter-spacing:.14em;line-height:1.9}
+.lockplate{position:absolute;z-index:6;left:50%;top:43%;transform:translate(-50%,-50%);width:104px;height:104px;border-radius:50%;background:radial-gradient(circle at 35% 25%,#ffedaa,#c28a2b 52%,#754a13);border:4px double #f7dc86;box-shadow:0 0 40px #e5b94b99,inset 0 0 0 5px #8a5b1c;display:grid;place-items:center;transition:opacity .35s,transform .5s}.lockhole{width:20px;height:20px;border-radius:50%;background:#2b1a08;position:relative}.lockhole:after{content:"";position:absolute;width:12px;height:28px;top:12px;left:4px;background:#2b1a08;border-radius:3px 3px 6px 6px}
+.keybtn{position:absolute;z-index:8;left:50%;top:61%;transform:translate(-50%,-50%);border:1px solid #f3d47c;border-radius:50%;width:76px;height:76px;background:linear-gradient(145deg,#ffedb1,#bd8326 68%,#81521a);color:#241707;font-size:36px;cursor:pointer;box-shadow:0 0 28px #eac363aa,0 9px 20px #0008}.keybtn span{display:block;transform:rotate(-40deg)}
+.instruction{position:absolute;z-index:8;bottom:26px;left:0;right:0;text-align:center;color:#f0dca9;font:12px Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase}.instruction button{display:block;margin:13px auto 0;padding:13px 20px;border:1px solid #f5d98a;border-radius:28px;background:linear-gradient(90deg,#f6df9b,#c38a2d);color:#172030;font-weight:bold;letter-spacing:.08em;cursor:pointer}
+.invite{position:absolute;inset:9px;z-index:2;opacity:0;visibility:hidden;transform:scale(.94);transition:opacity 1s .45s,transform 1s .45s,visibility 0s 1.5s;background:radial-gradient(ellipse at top,#fffdf4,#f2dfb6);color:#152338;border:2px solid #c49a47;border-radius:8px;padding:28px 17px 18px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;overflow-y:auto;overflow-x:hidden;box-shadow:inset 0 0 0 6px #e7c77855}
+.invite:before{content:"";position:absolute;inset:8px;border:1px solid #b28a3d;border-radius:5px;pointer-events:none}
+.arabic{font-family:"Amiri","Noto Naskh Arabic","Traditional Arabic",serif;font-size:32px;line-height:1.8;font-weight:600;color:#80571c;direction:rtl;unicode-bidi:isolate;margin:8px 0 8px;position:relative;z-index:1;flex-shrink:0}
+.smallcap{font:9px Arial,sans-serif;letter-spacing:.15em;text-transform:uppercase}.goldline{width:86px;height:1px;background:#ad7d30;margin:10px auto}.invite h2{font-family:'Great Vibes','Brush Script MT','Segoe Script',cursive;font-size:31px;font-weight:normal;font-style:normal;letter-spacing:.01em;margin:7px 0 4px}.of{font:10px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase}
+.names{font-family:'Great Vibes','Brush Script MT','Segoe Script',cursive;font-size:41px;font-weight:400;font-style:normal;letter-spacing:0;line-height:1.08;margin:6px 0 2px;color:#8a5a18}.amp{font-family:'Great Vibes','Brush Script MT','Segoe Script',cursive;font-size:31px;color:#9a702d;line-height:1.1}
+.info{font:15px/1.5 'Palatino Linotype','Book Antiqua',Georgia,serif;margin:7px 0 10px}.parent-name{font-size:13px;line-height:1.35;font-weight:400;letter-spacing:.02em;margin:0 0 5px;color:#5f5038}.map{display:inline-block;text-decoration:none;background:#102941;color:#fff0cb;padding:10px 16px;border-radius:30px;font:11px Arial,sans-serif;margin:1px 0 10px}.thanks{font-size:11px;font-style:italic;line-height:1.5;max-width:270px}
+.scene.unlocked .door.left{transform:rotateY(-112deg)}.scene.unlocked .door.right{transform:rotateY(112deg)}.scene.unlocked .lockplate{opacity:0;transform:translate(-50%,-50%) scale(.6)}.scene.unlocked .keybtn{animation:keyTurn 1s forwards;pointer-events:none}.scene.unlocked .instruction{opacity:0;pointer-events:none}.scene.unlocked .invite{opacity:1;visibility:visible;transform:scale(1);transition:opacity 1s .45s,transform 1s .45s,visibility 0s}
+@keyframes keyTurn{0%{transform:translate(-50%,-50%) rotate(0) scale(1);opacity:1}55%{transform:translate(-50%,-50%) rotate(230deg) scale(1.08);opacity:1}100%{transform:translate(-50%,-50%) rotate(360deg) scale(.15);opacity:0}}
+.reset{display:none;margin:0 auto;background:transparent;border:1px solid #c99a42;color:#f5dfaa;padding:10px 16px;border-radius:25px;font:11px Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}.reset.show{display:block}.copy-link{display:block;margin:10px auto 0;background:linear-gradient(90deg,#f6df9b,#c38a2d);border:0;color:#172030;padding:11px 18px;border-radius:25px;font:600 11px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}.copy-link:active{transform:scale(.98)}.note{text-align:center;font:11px/1.6 Arial,sans-serif;color:#bdb5a3;margin:14px 8px 0}
+@media(max-width:600px){.scene{min-height:610px}.book{height:590px}.invite{padding:20px 12px 18px;justify-content:flex-start}.arabic{font-size:29px;line-height:1.65;margin:8px 0 6px;flex-shrink:0}.goldline{margin:6px auto}.invite h2{font-size:28px;margin:4px 0 2px}.names{font-size:36px;line-height:1.05;margin:4px 0 1px}.parent-name{font-size:12px;line-height:1.25;margin:0 0 3px}.amp{font-size:29px!important}.of{font-size:9px}.smallcap{font-size:8px;letter-spacing:.12em}.back-copy h1{font-size:24px}.lockplate{width:88px;height:88px}.keybtn{width:68px;height:68px;top:61%}.info{font-size:13px;line-height:1.35;margin:5px 0 7px}.map{padding:9px 13px;margin:0 0 7px}.thanks{font-size:10px}.invite:before{inset:7px}}
+</style>
+</head>
+<body><main class="app">
+<p class="brand">A key to a beautiful memory</p>
+<div class="scene" id="scene"><div class="book">
+<div class="backdrop"><div class="arch"></div><div class="back-copy"><div class="orn">✦ ❧ ✦</div><h1>Walima<br>Reception</h1><div class="kicker">You are cordially invited</div></div></div>
+<div class="invite" id="invite">
+<div class="arabic" lang="ar" dir="rtl">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+<div class="smallcap">Together with our families</div><div class="goldline"></div>
+<div class="smallcap">Request the pleasure of your company at the</div>
+<h2>Walima Reception</h2><div class="goldline"></div>
+<div class="of">Celebrating the union of</div>
+<div class="names">Abdullah Haroon Dogar</div>
+<div class="info parent-name">S/o Abdul Ghaffar Dogar (LET)</div>
+<div class="amp" style="font-family:'Great Vibes','Brush Script MT','Segoe Script',cursive;font-size:35px;line-height:1.1">&amp;</div>
+<div class="names" style="margin-top:2px">Sana Amin</div>
+<div class="info parent-name">D/o Muhammad Ameen</div>
+<div class="goldline"></div>
+<div class="info"><strong>20 December 2026</strong><br>Sunday<br><br><strong>Khan Burger Restaurant 2</strong><br>Canal Road, Al Rehman Garden</div>
+<a class="map" href="https://www.google.com/maps/search/?api=1&query=Khan+Burger+Restaurant+2+Canal+Road+Al+Rehman+Garden" target="_blank" rel="noopener">⌖ &nbsp; OPEN LOCATION</a>
+<div class="thanks">Your gracious presence will make our celebration even more special.</div><div class="goldline"></div><div class="smallcap">With love &amp; warm regards</div>
+</div>
+<div class="doors" aria-hidden="true"><div class="door left"></div><div class="door right"></div></div>
+<div class="lockplate" aria-hidden="true"><div class="lockhole"></div></div>
+<button class="keybtn" id="key" aria-label="Turn the golden key" title="Turn key"><span>⚿</span></button>
+<div class="instruction" id="instruction">Your invitation is locked<button id="unlock">Turn the key to unlock</button></div>
+</div></div>
+<button class="reset" id="reset">↻ View the invitation again</button>
+<button class="copy-link" id="copyLink">⧉ Copy invitation link</button>
+<p class="note" id="copyNote">Walima Reception · Abdullah Dogar &amp; Sana Amin · 20 Dec 2026<br>Copy button copies this file address. A public guest link works after the card is published online.</p>
+</main>
+<script>
+const scene=document.getElementById('scene'),unlock=document.getElementById('unlock'),key=document.getElementById('key'),reset=document.getElementById('reset'),copyLink=document.getElementById('copyLink'),copyNote=document.getElementById('copyNote');
+function openInvitation(){if(scene.classList.contains('unlocked'))return;scene.classList.add('unlocked');reset.classList.add('show')}
+unlock.addEventListener('click',openInvitation);key.addEventListener('click',openInvitation);reset.addEventListener('click',()=>{scene.classList.remove('unlocked');reset.classList.remove('show')});
+copyLink.addEventListener('click',async()=>{const link=window.location.href;try{await navigator.clipboard.writeText(link);copyLink.textContent='✓ Link copied';copyNote.innerHTML='Link copied. For guests to open it on their phones, publish this card online and copy its public URL.';}catch(e){const area=document.createElement('textarea');area.value=link;area.style.position='fixed';area.style.opacity='0';document.body.appendChild(area);area.select();const ok=document.execCommand('copy');area.remove();copyLink.textContent=ok?'✓ Link copied':'Copy link manually';copyNote.textContent=ok?'Link copied. Publish the card online for a public guest link.':'Your browser blocked copying. Open the page address and copy it manually.';}setTimeout(()=>copyLink.textContent='⧉ Copy invitation link',2500);});
+</script></body></html>
